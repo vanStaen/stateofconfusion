@@ -1,0 +1,80 @@
+@schwerelos-green: #2BC487;
+@schwerelos-purple: #9F44D9;
+@schwerelos-pink: #F70069;
+
+.glitch {
+    z-index: 5;
+    position: relative;
+    top: -30px;            
+
+    .overText{
+        position: relative;
+        top: 1vw;          
+        opacity: .8;
+        font-family: sans-serif	;
+        font-weight: 300;	
+        letter-spacing: 17px;
+        font-size: 1vw;
+        @media all and (max-width: 520px) {
+          font-size: .7rem;
+        }
+    }
+
+    .glitchText {
+        display: grid;
+        grid-template-columns: 1fr;
+        text-transform: uppercase;
+      }
+      
+      .glitchText span {
+        font-weight: bold;
+        grid-row-start: 1;
+        grid-column-start: 1;
+        font-size: 12vw;
+        line-height: 8vw;
+        --stack-height: calc(100% / var(--stacks) - 1px);
+        --inverse-index: calc(calc(var(--stacks) - 1) - var(--index));
+        --clip-top: calc(var(--stack-height) * var(--index));
+        --clip-bottom: calc(var(--stack-height) * var(--inverse-index));
+        clip-path: inset(var(--clip-top) 0 var(--clip-bottom) 0);
+        animation: stack 750ms cubic-bezier(.46,.29,0,1.24) 1 backwards calc(var(--index) * 20ms), glitch 3s ease infinite 1s alternate-reverse;
+        @media all and (max-width: 520px) {
+          font-size: 1.3rem;
+        }
+      }
+      
+      .glitchText span:nth-child(odd) { --glitch-translate: 20px; }
+      .glitchText span:nth-child(even) { --glitch-translate: -20px; }
+      
+      @keyframes stack {
+        0% {
+          opacity: 0;
+          transform: translateX(-50%);
+          text-shadow: -2px 3px 0 @schwerelos-pink, 2px -3px 0 @schwerelos-green;
+        };
+        60% {
+          opacity: 0.5;
+          transform: translateX(50%);
+        }
+        80% {
+          transform: none;
+          opacity: 1;
+          text-shadow: 2px -3px 0 @schwerelos-pink, -2px 3px 0 @schwerelos-green;
+        }
+        100% {
+          text-shadow: none;
+        }
+      }
+      
+      @keyframes glitch {
+        0% {
+          text-shadow: -2px 3px 0 @schwerelos-pink, 2px -3px 0 @schwerelos-green;
+          transform: translate(var(--glitch-translate));
+        }
+        2% {
+          text-shadow: 2px -3px 0 @schwerelos-pink, -2px 3px 0 @schwerelos-green;
+        }
+        4%, 100% {  text-shadow: none; transform: none; }
+      }
+
+}
