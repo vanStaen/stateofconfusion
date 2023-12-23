@@ -1,7 +1,7 @@
 # stateofconfusion
 
-- [ ] Boilerplate React init
+- [x] Boilerplate React init
 - [ ] Landing page
-  - [ ] 3D-FX Logo
+  - [x] 3D-FX Logo
   - [ ] Next party
-  - [ ] Links 
+  - [x] Links
