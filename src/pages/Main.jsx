@@ -15,7 +15,7 @@ export const Main = () => {
 
     return (
         <>
-            <GlitchText glitchText={'State of Confusion'} overText={'Techno Raves, Berlin'} />
+            <GlitchText glitchText={'State of Confusion'} overText={'Techno | Raves | Berlin'} />
             <div className="socialsContainer">
                 <a
                     className="link"

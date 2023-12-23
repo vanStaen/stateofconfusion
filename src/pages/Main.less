@@ -1,4 +1,6 @@
 .socialsContainer {
+    position: absolute;
+    bottom: 20px;
     z-index: 2;
     margin: 5px 10px;
     
@@ -10,24 +12,26 @@
         text-decoration: none;
         letter-spacing: 3px;
         transition: color .3s;
-        padding: 0 5px;
+        padding: 0 7px;
+        transition: transform .3s ease-in-out; 
+        @media all and (max-width: 520px) {
+            padding: 0 30px;
+          }
         &:hover {
             text-decoration: none;
             opacity: .75;
+            transform: rotate(1turn);
         }
         .instaLogo {
-            position: relative;
-            top: 1px;
-            width: 30px;
+            width: 23px;
         }
         .telegramLogo {
-            width: 27px;
+            width: 25px;
+            padding-left: 4px;
         }
         .emailLogo {
-            position: relative;
-            top: -1px;
             width: 33px;
             height: 25px;
-            }
+        }
     }
 }
