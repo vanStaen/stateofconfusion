@@ -1,0 +1,33 @@
+.socialsContainer {
+    z-index: 2;
+    margin: 5px 10px;
+    
+    .link {
+        display: inline-block;
+        color: rgba(255, 255, 255, .95);
+        font-weight: 300;
+        cursor: pointer;
+        text-decoration: none;
+        letter-spacing: 3px;
+        transition: color .3s;
+        padding: 0 5px;
+        &:hover {
+            text-decoration: none;
+            opacity: .75;
+        }
+        .instaLogo {
+            position: relative;
+            top: 1px;
+            width: 30px;
+        }
+        .telegramLogo {
+            width: 27px;
+        }
+        .emailLogo {
+            position: relative;
+            top: -1px;
+            width: 33px;
+            height: 25px;
+            }
+    }
+}

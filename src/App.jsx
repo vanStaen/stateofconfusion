@@ -3,9 +3,9 @@ import { observer } from "mobx-react";
 import { BrowserRouter } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-import { GlitchText } from "./components/GlitchText/GlitchText";
 import { LanguageDropDown } from "./components/LanguageDropDown/LanguageDropDown";
 import { consoleGreetings } from "./helpers/consoleGreetings";
+import { Main } from './pages/Main';
 
 import "./lib/i18n";
 import "./App.less";
@@ -43,7 +43,7 @@ const App = observer(() => {
       <div className="App">
         <div className="main">
           <LanguageDropDown />
-          <GlitchText glitchText={'State of Confusion'} overText={'Techno parties, Berlin'} />
+          <Main />
         </div>
       </div>
     </BrowserRouter>

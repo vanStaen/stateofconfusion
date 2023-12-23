@@ -72,5 +72,9 @@
   },
   "404": {
     "endOfInternet" : "Sie haben das Ende des Internets erreicht!"
+  },
+  "general": {
+    "on" : "auf",
+    "emailUs": "Schreib uns"
   }
 }
