@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import { GlitchText } from "../components/GlitchText/GlitchText";
 import InstaLogo from "../img/logos/instaLogo.png";
 import TelegramLogo from "../img/logos/telegramLogo.png";
+import SoundcloudLogo from "../img/logos/soundcloudLogo.png";
 import EmailLogo from "../img/logos/emailLogo.png";
 
 import './Main.less';
@@ -35,7 +36,7 @@ export const Main = () => {
                 </a >
                 <a
                     className="link"
-                    href="#"
+                    href="https://t.me/stateofconfusion"
                     target="_blank"
                 >
                     <Tooltip
@@ -47,6 +48,22 @@ export const Main = () => {
                         }
                     >
                         <img className="telegramLogo" src={TelegramLogo} id="telegram" />
+                    </Tooltip>
+                </a >
+                <a
+                    className="link"
+                    href="https://soundcloud.com/stateofconfusion"
+                    target="_blank"
+                >
+                    <Tooltip
+                        placement="bottom"
+                        title={
+                            <>
+                                <i>State of Confusion</i> {t("general.on")} Soundcloud
+                            </>
+                        }
+                    >
+                        <img className="soundcloudLogo" src={SoundcloudLogo} id="soundcloud" />
                     </Tooltip>
                 </a >
                 <Tooltip
