@@ -26,6 +26,7 @@ module.exports = {
     }),
     new CopyPlugin({
       patterns: [
+        { from: "public/soc_icon.png" },
         { from: "public/manifest.webmanifest" },
       ],
     }),

@@ -24,6 +24,7 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         { from: "public/manifest.webmanifest" },
+        { from: "public/soc_icon.png" },
         { from: "public/CNAME" },
       ],
     }),
